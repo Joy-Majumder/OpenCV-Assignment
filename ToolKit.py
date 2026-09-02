@@ -15,5 +15,3 @@ def image_processing():
     cv.imshow("Rotate", rotate)
     cv.waitKey(0)
     cv.destroyAllWindows()
-
-image_processing()

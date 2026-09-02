@@ -4,7 +4,6 @@ import cv2 as cv
 def multiple_face_tracking():
 
     camera = cv.VideoCapture(0)
-
     face_capture = cv.CascadeClassifier(
         "/Users/joy0x1/Downloads/UIU Mariner/Assignment/Ass2/cascadeFile/haarcascade_frontalface_default.xml"
     )
@@ -16,7 +15,6 @@ def multiple_face_tracking():
                 gray, scaleFactor=1.1, minNeighbors=5, minSize=(40,40),
                 flags = cv.CASCADE_SCALE_IMAGE
                 )
-
         for i,(x,y,w,h) in enumerate(face):
             cv.rectangle(vdo, (x,y), (x+w, y+h),(0,0,0),2)
 
@@ -25,11 +23,8 @@ def multiple_face_tracking():
         cv.putText(vdo,f"Faces: {len(face)}",(20, 40),
             cv.FONT_HERSHEY_SIMPLEX,1,(0, 0, 0),2)
         cv.imshow("Multiple Face Tracking", vdo)
-
         if cv.waitKey(10) == ord("a"):
             break
-
+        
     camera.release()
     cv.destroyAllWindows()
-
-multiple_face_tracking()

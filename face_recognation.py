@@ -21,5 +21,3 @@ def face_detect():
 
     camera.release()
     cv.destroyAllWindows()
-
-face_detect()
