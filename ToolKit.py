@@ -1,6 +1,6 @@
 import cv2 as cv
 
-def grayscale_image():
+def image_processing():
     path = "/Users/joy0x1/Downloads/UIU Mariner/Assignment/Ass2/ass/im1.jpeg"
     img = cv.imread(path)
     imgray = cv.cvtColor(img, cv.COLOR_BGR2GRAY) # this one gonna be used for gray color -,-
@@ -16,4 +16,4 @@ def grayscale_image():
     cv.waitKey(0)
     cv.destroyAllWindows()
 
-grayscale_image()
+image_processing()
