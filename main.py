@@ -1,7 +1,7 @@
-from face_recognation import face_recognition
-from track import face_tracking
-from gender import age_gender
-from obCount import object_counting
+from face_recognation import face_detect
+# from track import face_tracking
+# from gender import age_gender
+# from obCount import object_counting
 from ToolKit import image_processing
 
 while True:
@@ -9,12 +9,12 @@ while True:
     print("2. Multiple Face Tracking")
     print("3. Age/Gender Estimation")
     print("4. Object Counting")
-    print("5. Image Processing")
+    print("5. Image Processing: which is includes everything")
     print("Q. Quit")
     choice = input("Choose: ")
 
     if choice == "1":
-        face_recognition()
+        face_detect()
     elif choice == "2":
         face_tracking()
     elif choice == "3":
