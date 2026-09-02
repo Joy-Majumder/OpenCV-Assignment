@@ -17,8 +17,8 @@ def multiple_face_tracking():
                 flags = cv.CASCADE_SCALE_IMAGE
                 )
 
-        for(x,y,w,h) in face:
-            cv.rectangle(vdo, (x,y), (x+w, y+h),(0,255,0),2)
+        for i,(x,y,w,h) in enumerate(face):
+            cv.rectangle(vdo, (x,y), (x+w, y+h),(0,0,0),2)
 
             cv.putText(
                 vdo,f"Face {i + 1}",(x, y - 10),cv.FONT_HERSHEY_SIMPLEX,0.7,(0, 255, 0),2)
